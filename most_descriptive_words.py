@@ -130,8 +130,8 @@ if __name__ == '__main__':
     miu = 0.2
 
     # Unigram's Calculation
-    CollectionCounter("/Users/negin/Desktop/HAM2-corpus-all.txt")
-    DocCounter("/Users/negin/Desktop/input3.txt")
+    CollectionCounter("./corpus.txt")
+    DocCounter("./input.txt")
     print("Unigram's Collection is Finished")
     P1 = []
     P2 = []
@@ -152,7 +152,7 @@ if __name__ == '__main__':
 
     print("Writing Unigram.csv")
     columnTitleRow = "landa = 0.01, landa = 0.1, landa = 0.3, landa = 0.5\n"
-    unigram = codecs.open("/Users/negin/Desktop/Unigram_3.csv", "wb", "utf-8")
+    unigram = codecs.open("./Unigram.csv", "wb", "utf-8")
     unigram.write(columnTitleRow)
     temp1 = sorted(P1, key=lambda p1: p1[1])[:10]
     temp2 = sorted(P2, key=lambda p2: p2[1])[:10]
@@ -172,8 +172,8 @@ if __name__ == '__main__':
     print("Unigram is Finished")
 
     # Bigram's Calculation
-    CollectionCounterBigram("/Users/negin/Desktop/HAM2-corpus-all.txt")
-    DocCounterBigram("/Users/negin/Desktop/input3.txt")
+    CollectionCounterBigram("./corpus.txt")
+    DocCounterBigram("./input.txt")
     print("Bigram's Collection is Finished")
     landa5 = miu / (docSumWords[0] + miu)
     PB1 = []
@@ -197,7 +197,7 @@ if __name__ == '__main__':
         PB4.append((docFeaturesBigram[i], PBWi4))
     print("Writing Bigram.csv")
     columnTitleRow = "landa = 0.01, landa = 0.1, landa = 0.3, landa = 0.5\n"
-    bigram = codecs.open("/Users/negin/Desktop/Bigram_3.csv", "wb", "utf-8")
+    bigram = codecs.open("./Bigram.csv", "wb", "utf-8")
     bigram.write(columnTitleRow)
     temp1 = sorted(PB1, key=lambda pb1: pb1[1])[:10]
     temp2 = sorted(PB2, key=lambda pb2: pb2[1])[:10]
