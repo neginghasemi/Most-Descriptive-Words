@@ -9,6 +9,9 @@ Assuming a generative model, we estimate the query topic model using the observe
 
 I also used Dirichlet smoothing for better results.
 
+## Data
+[Hamshahri Corpus](http://farsidoc.infor.uva.es)
+
 ## Uses
  - [Sklearn](http://scikit-learn.org/stable/)
 
